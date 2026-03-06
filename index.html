@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Prashanth & Bhavya Sri | Wedding Invitation</title>
+  <meta name="description" content="You are invited to celebrate the wedding of Prashanth and Bhavya Sri." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="floating">
+    <button id="musicBtn" class="pill" title="Play Music">♪</button>
+    <a class="pill primary" href="#details">Details</a>
+  </div>
+
+  <!-- OPEN SCREEN -->
+  <section class="intro" id="top">
+    <div class="intro-bg" style="background-image:url('hands.jpg')"></div>
+    <div class="intro-overlay"></div>
+
+    <div class="door-wrap">
+      <div class="tagline">You all are invited 💛</div>
+
+      <div class="door" id="door">
+        <div class="door-inner">
+          <div class="seal">✦</div>
+          <div class="door-title">Open Invitation</div>
+          <div class="door-sub">Tap to enter our wedding story</div>
+          <button class="door-btn" id="openBtn">OPEN</button>
+          <div class="hint">Music will start after you tap</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll">Welcome ✨</div>
+  </section>
+
+  <!-- PB INTRO ANIMATION -->
+  <section id="pbIntro" class="pb-intro hidden">
+    <div class="pb-bg"></div>
+    <div class="pb-overlay"></div>
+
+    <div class="pb-content">
+      <div class="pb-letters">
+        <span class="big-letter left-letter">P</span>
+        <span class="big-letter right-letter">B</span>
+      </div>
+
+      <div class="names-row">
+        <span id="nameP" class="side-name left-name">Prashanth</span>
+        <span id="wedsText" class="weds-text">Weds</span>
+        <span id="nameB" class="side-name right-name">Bhavya Sri</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN WEBSITE -->
+  <main id="main" class="hidden">
+    <header class="hero">
+      <div class="hero-bg" style="background-image:url('cover.jpg')"></div>
+      <div class="hero-overlay"></div>
+
+      <nav class="nav">
+        <div class="brand">Wedding Invite</div>
+        <div class="nav-links">
+          <a href="#invite">Invitation</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#details">Events</a>
+          <a href="#blessings">Blessings</a>
+          <a href="#wishes">Wishes</a>
+        </div>
+      </nav>
+
+      <div class="hero-inner">
+        <p class="kicker">With the blessings of our families</p>
+        <h1 class="names">
+          <span>Prashanth</span>
+          <em>&</em>
+          <span>Bhavya Sri</span>
+        </h1>
+        <p class="subtitle">Request the honor of your presence at our wedding celebration</p>
+
+        <div class="countdown" aria-label="Countdown to wedding">
+          <div class="cd"><div id="d">00</div><small>Days</small></div>
+          <div class="cd"><div id="h">00</div><small>Hours</small></div>
+          <div class="cd"><div id="m">00</div><small>Mins</small></div>
+          <div class="cd"><div id="s">00</div><small>Secs</small></div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#invite">View Invitation</a>
+          <button class="btn ghost" id="toggleMusic2">Play Music</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="invite">
+      <div class="container">
+        <div class="invite-card glass reveal">
+          <h2 class="script">You’re Invited 💍</h2>
+          <p class="lead">
+            With joyful hearts and the blessings of our families, we invite you to join us as we celebrate the wedding of
+            <strong>Prashanth</strong> and <strong>Bhavya Sri</strong>.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="mini-title">Date</div>
+              <div class="mini-value">March 14, 2026</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Ceremony</div>
+              <div class="mini-value">5:00 PM</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Reception</div>
+              <div class="mini-value">7:00 PM</div>
+            </div>
+          </div>
+
+          <div class="line"></div>
+
+          <p class="quote">“Two hearts, one journey, one forever.” ✨</p>
+
+          <div class="cta-row">
+            <a class="btn" href="#details">See Events</a>
+            <a class="btn ghost" href="#wishes">Send Wishes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Our Memories</h2>
+        <p class="section-sub">A few beautiful moments from our journey together</p>
+
+        <div class="polaroids">
+          <figure class="polaroid float1"><img src="p1.jpg" alt="Photo 1"><figcaption>Our Smile ✨</figcaption></figure>
+          <figure class="polaroid float2"><img src="p2.jpg" alt="Photo 2"><figcaption>Sweet Moment 💛</figcaption></figure>
+          <figure class="polaroid float3"><img src="p3.jpg" alt="Photo 3"><figcaption>Forever Us 💍</figcaption></figure>
+          <figure class="polaroid float4"><img src="p4.jpg" alt="Photo 4"><figcaption>Love Story 📸</figcaption></figure>
+        </div>
+
+        <div class="grid gallery">
+          <img class="zoomable" src="g1.jpg" alt="Gallery 1">
+          <img class="zoomable" src="g2.jpg" alt="Gallery 2">
+          <img class="zoomable" src="g3.jpg" alt="Gallery 3">
+          <img class="zoomable" src="g4.jpg" alt="Gallery 4">
+          <img class="zoomable" src="g5.jpg" alt="Gallery 5">
+          <img class="zoomable" src="g6.jpg" alt="Gallery 6">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="details">
+      <div class="container">
+        <h2 class="section-title">Wedding Details</h2>
+        <p class="section-sub">We would be delighted to have you with us</p>
+
+        <div class="grid cards">
+          <article class="card reveal">
+            <h3>Wedding Ceremony</h3>
+            <p class="meta">🗓 March 14, 2026 • 🕔 5:00 PM</p>
+            <p class="meta">📍 Ceremony Venue Name</p>
+            <p class="text">Full address line here</p>
+            <a class="btn small" target="_blank" rel="noreferrer"
+               href="https://www.google.com/maps/search/?api=1&query=Cedar+Park+Texas">Open Map</a>
+          </article>
+
+          <article class="card reveal">
+            <h3>Reception</h3>
+            <p class="meta">🗓 March 14, 2026 • 🕖 7:00 PM</p>
+            <p class="meta">📍 Reception Venue Name</p>
+            <p class="text">Full address line here</p>
+            <a class="btn small ghost" target="_blank" rel="noreferrer"
+               href="https://www.google.com/maps/search/?api=1&query=Cedar+Park+Texas">Open Map</a>
+          </article>
+
+          <article class="card reveal">
+            <h3>Dress Code</h3>
+            <p class="meta">✨ Traditional / Formal</p>
+            <p class="text">Your presence and blessings mean the world to us.</p>
+            <button class="link-btn" id="copyInvite">Copy Invite Text</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="blessings">
+      <div class="container">
+        <h2 class="section-title">With Blessings</h2>
+        <p class="section-sub">Together with our beloved parents</p>
+
+        <div class="bless-grid">
+          <div class="bless card glass reveal">
+            <h3>Bride</h3>
+            <p class="big">Bhavya Sri</p>
+            <p class="muted">Daughter of</p>
+            <p class="parents">
+              Mr. Bride Father Name <br/>
+              Mrs. Bride Mother Name
+            </p>
+          </div>
+
+          <div class="bless card glass reveal">
+            <h3>Groom</h3>
+            <p class="big">Prashanth</p>
+            <p class="muted">Son of</p>
+            <p class="parents">
+              Mr. Groom Father Name <br/>
+              Mrs. Groom Mother Name
+            </p>
+          </div>
+        </div>
+
+        <div class="final-note reveal">
+          <p class="quote2">Your presence is our greatest gift 💛</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="wishes">
+      <div class="container">
+        <h2 class="section-title">Send Your Wishes 💌</h2>
+        <p class="section-sub">Your blessings can be sent privately to us</p>
+
+        <div class="wish-card card glass reveal">
+          <p class="text">
+            Please click below to leave your wishes. Your message will go to our private Google Form and only we can see it.
+          </p>
+
+          <a class="btn primary" target="_blank" rel="noreferrer"
+             href="YOUR_GOOGLE_FORM_LINK">
+            Leave a Wish
+          </a>
+
+          <p class="tiny muted">
+            Replace the Google Form link with your own private form link.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-title">Prashanth ❤ Bhavya Sri</div>
+          <div class="muted">Thank you for celebrating with us.</div>
+        </div>
+        <a class="to-top" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <div class="imgModal" id="imgModal" aria-hidden="true">
+    <button class="imgClose" id="imgClose" aria-label="Close">✕</button>
+    <img id="imgBig" alt="Zoomed image" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
