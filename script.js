@@ -1,6 +1,3 @@
-// ===========================
-// EDIT THESE DETAILS
-// ===========================
 const weddingDate = new Date("2026-03-14T17:00:00-06:00");
 
 const INVITE_TEXT =
@@ -12,14 +9,9 @@ Venue: Add your venue here`;
 
 let autoPlayMusicAfterOpen = true;
 
-// ===========================
-// Helpers
-// ===========================
 const pad2 = (n) => String(n).padStart(2, "0");
 
-// ===========================
-// Countdown
-// ===========================
+// countdown
 function tick(){
   const now = new Date();
   const diff = weddingDate - now;
@@ -42,9 +34,7 @@ function tick(){
 tick();
 setInterval(tick, 1000);
 
-// ===========================
-// Smooth scroll
-// ===========================
+// smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener("click", (e) => {
     const id = a.getAttribute("href");
@@ -55,9 +45,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ===========================
-// Music
-// ===========================
+// music
 const music = document.getElementById("bgMusic");
 const musicBtn = document.getElementById("musicBtn");
 const toggleMusic2 = document.getElementById("toggleMusic2");
@@ -92,9 +80,7 @@ async function tryToggleMusic(forceOn = null){
 if (musicBtn) musicBtn.addEventListener("click", () => tryToggleMusic(null));
 if (toggleMusic2) toggleMusic2.addEventListener("click", () => tryToggleMusic(null));
 
-// ===========================
-// Open animation
-// ===========================
+// open animation
 const openBtn = document.getElementById("openBtn");
 const door = document.getElementById("door");
 const pbIntro = document.getElementById("pbIntro");
@@ -119,13 +105,11 @@ if (openBtn) {
       main.classList.remove("hidden");
       const invite = document.getElementById("invite");
       if (invite) invite.scrollIntoView({ behavior: "smooth" });
-    }, 5000);
+    }, 5200);
   });
 }
 
-// ===========================
-// Copy invite text
-// ===========================
+// copy invite
 const copyInvite = document.getElementById("copyInvite");
 if (copyInvite) {
   copyInvite.addEventListener("click", async () => {
@@ -138,9 +122,7 @@ if (copyInvite) {
   });
 }
 
-// ===========================
-// Reveal on scroll
-// ===========================
+// reveal on scroll
 const revealEls = Array.from(document.querySelectorAll(".reveal"));
 const io = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -150,9 +132,7 @@ const io = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => io.observe(el));
 
-// ===========================
-// Image zoom
-// ===========================
+// image zoom
 const modal = document.getElementById("imgModal");
 const imgBig = document.getElementById("imgBig");
 const close = document.getElementById("imgClose");
@@ -185,9 +165,7 @@ document.querySelectorAll(".zoomable, .polaroid").forEach(el => {
   });
 });
 
-// ===========================
-// Background sparkle effect
-// ===========================
+// sparkle background
 const canvas = document.getElementById("fx");
 const ctx = canvas.getContext("2d");
 let W, H, particles;
